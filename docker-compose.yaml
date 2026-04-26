@@ -4,11 +4,12 @@ services:
   api:
     build: .
     ports:
-      - "5000:5000"
+      - "5001:5001"
     depends_on:
       - mongo
     environment:
       - MONGO_URI=mongodb://mongo:27017/tododb
+      - PORT=5001
 
   mongo:
     image: mongo
